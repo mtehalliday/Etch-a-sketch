@@ -24,18 +24,23 @@ function resetGrid() {
     }
     const newSize = prompt("What size grid would you like?")
     createGrid(newSize);
+    drawReady();
 }
+function drawReady() {
+    const squares = document.querySelectorAll("div.col")
 
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].addEventListener("mouseover", () => {
+            squares[i].classList.toggle("hover");
+        });
+    }
+}
 
 createGrid(16);
+drawReady();
 
-const squares = document.querySelectorAll("div.col")
 
-for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener("mouseover", () => {
-        squares[i].classList.toggle("hover");
-    });
-}
+
 
 const reset = document.querySelector(".reset")
 
