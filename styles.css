@@ -47,3 +47,10 @@ html, body {
     background-color: black;
 
 }
+
+.reset {
+    padding: 10px 24px;
+    margin: 20px;
+    background-color: rgb(220,0,40);
+    color:rgb(243, 239, 239);
+}

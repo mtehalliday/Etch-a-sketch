@@ -23,7 +23,7 @@ createGrid(16);
 const squares = document.querySelectorAll("div.col")
 
 for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener("mousedown", () => {
+    squares[i].addEventListener("mouseover", () => {
         squares[i].classList.toggle("hover");
     });
 }
