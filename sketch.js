@@ -17,6 +17,13 @@ function createGrid(size) {
     }
 }
 
+function resetGrid() {
+    const container = document.querySelector(".container");
+    while((container).hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 
 createGrid(16);
 
@@ -27,3 +34,5 @@ for (let i = 0; i < squares.length; i++) {
         squares[i].classList.toggle("hover");
     });
 }
+
+const reset = querySelector(".reset")
