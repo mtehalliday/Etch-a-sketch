@@ -5,6 +5,7 @@ const container = document.body.querySelector(".container");
 //Finally append to container div 
 
 function createGrid(size) {
+    const container = document.body.querySelector(".container");
     for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
         row.classList.add("row");
@@ -22,7 +23,10 @@ function resetGrid() {
     while((container).hasChildNodes()) {
         container.removeChild(container.firstChild);
     }
-    const newSize = prompt("What size grid would you like?")
+    let newSize = prompt("What size grid would you like?")
+    if (newSize < 2 || newSize > 99 || isNaN(newSize) ) {
+        newSize = prompt("Size must be greater than 1 and less than 100")
+    }
     createGrid(newSize);
     drawReady();
 }
