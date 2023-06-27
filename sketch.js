@@ -4,12 +4,12 @@ const container = document.body.querySelector(".container");
 //append then, create a loop which adds 16, pixel divs to each columns, so create them, then append. 
 //Finally append to container div 
 
-function createGrid() {
-    for (let i = 0; i < 16; i++) {
+function createGrid(size) {
+    for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
         row.classList.add("row");
         container.appendChild(row);
-        for (let j = 0; j < 16; j++) {
+        for (let j = 0; j < size; j++) {
             let column = document.createElement("div");
             column.classList.add("col")
             row.appendChild(column);
@@ -17,4 +17,13 @@ function createGrid() {
     }
 }
 
-createGrid();
+
+createGrid(16);
+
+const squares = document.querySelectorAll("div.col")
+
+for (let i = 0; i < squares.length; i++) {
+    squares[i].addEventListener("mousedown", () => {
+        squares[i].classList.toggle("hover");
+    });
+}

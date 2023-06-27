@@ -42,3 +42,8 @@ html, body {
     width: 600px;
     border: 5px solid black;
 }
+
+.col.hover {
+    background-color: black;
+
+}
