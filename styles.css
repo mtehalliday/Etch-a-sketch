@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: roboto, arial, sans-serif;
+    height: 100vw;
+    width: 100%;
+    display: flex;
+}
+
+
+.row {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.col {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+}
