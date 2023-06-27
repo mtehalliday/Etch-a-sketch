@@ -53,4 +53,6 @@ html, body {
     margin: 20px;
     background-color: rgb(220,0,40);
     color:rgb(243, 239, 239);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.2)
 }
