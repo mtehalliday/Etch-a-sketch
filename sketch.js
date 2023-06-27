@@ -22,6 +22,8 @@ function resetGrid() {
     while((container).hasChildNodes()) {
         container.removeChild(container.firstChild);
     }
+    const newSize = prompt("What size grid would you like?")
+    createGrid(newSize);
 }
 
 
@@ -35,4 +37,6 @@ for (let i = 0; i < squares.length; i++) {
     });
 }
 
-const reset = querySelector(".reset")
+const reset = document.querySelector(".reset")
+
+reset.addEventListener("click", resetGrid)
